@@ -60,9 +60,15 @@ def stri(lst):
   N = len(lst)
   disp = min(N, 10)
   store = ""
+
   for i in range(disp):
-    store = store + str(lst[i]) + ", "
-  store = store + "..."
+    if i + 1 < disp:
+      store = store + str(lst[i]) + ", "
+    else:
+      store = store + str(lst[i])
+  
+  if N > disp:
+    store = store + ", ..."
   return store
 
 def field_query(query):
@@ -88,6 +94,8 @@ def field_query(query):
     print("Body: " + stri(index[token][2]))
     print("Links: " + stri(index[token][5]))
     print()
+
+  return
 
 query = sys.argv[2]
 field_query(query)

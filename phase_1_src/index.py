@@ -8,7 +8,7 @@ Original file is located at
 """
 
 import time
-start = time.time();
+# start = time.time();
 
 import nltk
 nltk.download('punkt')
@@ -309,16 +309,16 @@ if OUTPUT_DIR.endswith("/"):
 pickle_out = open(OUTPUT_DIR + "/index.pkl", "wb")
 pickle.dump(indexed_dict, pickle_out)
 
-end = time.time()
+# end = time.time()
 
-print("Number of Docs Processed =", doc_id)
-print("Time Taken = " + str((end - start) / 60) + " minutes")
-print("Token Count: " + str(token_count))
+# print("Number of Docs Processed =", doc_id)
+# print("Time Taken = " + str((end - start) / 60) + " minutes")
+# print("Token Count: " + str(token_count))
 
-cnt = 0
-for key in indexed_dict.keys():
-  cnt += 1
-print("Number of Keys: " + str(cnt))
+# cnt = 0
+# for key in indexed_dict.keys():
+#   cnt += 1
+# print("Number of Keys: " + str(cnt))
 
 # title: 0, infobox: 1, body: 2, categories: 3, references: 4, external_links: 5
 
