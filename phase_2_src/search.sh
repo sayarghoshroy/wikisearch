@@ -1,0 +1,1 @@
+python search.py $1 > queries_op.txt

@@ -1,10 +1,11 @@
+import time
 import pickle
 import sys
 import os
 import math
 
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 import re
 import os
 import shutil
@@ -34,7 +35,7 @@ def stem(token):
   stemmed_dict[token] = temp
   return temp
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 stopword = stopwords.words('english')
 snowball_stemmer = SnowballStemmer('english')
 word_set = {}
@@ -48,6 +49,7 @@ for word in stopword:
 
 file_id = open("id_to_title.pickle", "rb")
 id_to_title = pickle.load(file_id)
+
 
 def clean(txt):
   txt = txt.replace("\n", " ").replace("\r", " ")
@@ -83,7 +85,9 @@ def stri(lst):
 scores = {}
 # stores returned postings of all encountered tokens
 
-doc_cnt = 36000
+doc_cnt = 0
+for key in id_to_title.keys():
+  doc_cnt += 1
 # Total number of docs encountered in the dump
 
 doc_score = {}
@@ -97,14 +101,14 @@ def get_token_scores(word):
   return [[], [], [], [], [], [], [0, 0, 0, 0, 0, 0]]
 # title: 0, infobox: 1, body: 2, categories: 3, references: 4, external_links: 5
 
-def field_query(query):
+def field_query(query, K):
   # t:World Cup i:2019 c:Cricket
   units = query.split(" ")
   token_query = [[], [], [], [], [], []]
   normal_query = []
 
   tokens = []
-  field_match_reward = 3
+  field_match_reward = 2.5
 
   flag = -1
   for unit in units:
@@ -136,23 +140,44 @@ def field_query(query):
     scores[token] = get_token_scores(token)
     for field in range(6):
       for doc in scores[token][field]:
-        temp = 1 + math.log(doc[1]) * math.log(doc_cnt / len(scores[token][field]))
+        temp = (1 + math.log(doc[1])) * math.log(doc_cnt / len(scores[token][field]))
         if token in token_query[field]:
           temp *= field_match_reward
         if doc[0] not in doc_score:
           doc_score[doc[0]] = 0
         doc_score[doc[0]] += temp
 
-  K = 5
+  # print(token_query)
+
+  processed = 0
   for elem in (sorted(doc_score.items(), key = lambda kv:(kv[1], kv[0]), reverse = True)):
+    # if elem[0] in id_to_title:
+    #   print(str(elem) + ", Title: " + id_to_title[elem[0]])
+    # else:
+    #   print(str(elem))
+
     if elem[0] in id_to_title:
-      print(str(elem) + ", Title: " + id_to_title[elem[0]])
+      print(str(elem[0]) + ", " + id_to_title[elem[0]].lower())
     else:
-      print(str(elem))
-    K -= 1
-    if K == 0:
+      print(str(elem[0])) + ", " + "_"
+
+    processed += 1
+    if processed == K:
       break
 
+query_file = sys.argv[1]
 
-query = "t:World Cup i:2019 c:Cricket"
-field_query(query)
+file = open(query_file, "r+").read().split("\n")
+
+for line in file:
+	doc_score = {}
+	start = time.time()
+	try:
+		K, query = line.split(", ")
+		K = int(K)
+		field_query(query, K)
+		end = time.time()
+		print(str(end - start) + ", " + str((end - start) / K))
+		print()
+	except:
+		continue

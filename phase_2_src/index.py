@@ -9,6 +9,7 @@ Original file is located at
 
 import time
 # start = time.time();
+parse_errors = 0
 
 import nltk
 nltk.download('punkt')
@@ -42,6 +43,7 @@ def strip_accents(s):
 	return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
 
 stemmed_dict = {}
+id_to_title = {}
 
 def stem(token):
   if token in stemmed_dict:
@@ -80,9 +82,6 @@ def regtok(txt):
   # tokens = regexp_tokenize(txt, pattern = '\s+', gaps = True)
   return tokens
 
-
-# title: 0, infobox: 1, body: 2, categories: 3, references: 4, external_links: 5
-
 # title: 0, infobox: 1, body: 2, categories: 3, references: 4, external_links: 5
 
 class NewHandler(xml.sax.ContentHandler):
@@ -101,6 +100,8 @@ class NewHandler(xml.sax.ContentHandler):
 			self.text_flag = True
 		elif name == "page":
 			doc_id = doc_id + 1
+			if doc_id % 10000 == 0:
+				print("Doc ID:", doc_id)
 
 	def endElement(self, name):
 		global doc_id
@@ -245,8 +246,10 @@ class NewHandler(xml.sax.ContentHandler):
 		global doc_id
 		global indexed_dict
 		global token_count
+		global id_to_title
 
 		if self.title_flag is True:
+			id_to_title[doc_id] = data
 			data = data.replace(":", " ")
 			tokens = regtok(data)
 			
@@ -279,8 +282,8 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 print("Number of Files: " + str(len(onlyfiles)))
 
 
-cutoff = int(1000)
-cutoff_increment = 1000
+cutoff = int(1e4)
+cutoff_increment = cutoff
 handler = NewHandler()
 parser = xml.sax.make_parser()
 parser.setContentHandler(handler)
@@ -311,26 +314,41 @@ for data_path in onlyfiles:
 	indexed_dict = {}
 	file_path = mypath + "/" + data_path
 
+	handler = 0
+	parser = 0
+
+	handler = NewHandler()
+	parser = xml.sax.make_parser()
+	parser.setContentHandler(handler)
+
+	line_count = 0
 	for line in subprocess.Popen(['bzcat'], stdin = open(file_path), stdout = subprocess.PIPE).stdout:
 		if line == '':
 	  		break
-		# Get next line from file 
+		line = line.decode('utf-8')
+		# Get next line from file
 		# line = lines[count]
 		try:
 			parser.feed(line)
 		except:
-			print("Parse Error")
-			pass
-		
+			parse_errors += 1
+			if parse_errors % 100 == 0:
+				print("Errors: " + str(parse_errors))
+
 		if doc_id > cutoff:
+			print(cutoff)
 			cutoff += cutoff_increment
 			break
 
-	print(cutoff)
-
 	pickle_out = open("temp_dicts/index" + str(dump_count) + ".pkl", "wb")
 	pickle.dump(indexed_dict, pickle_out)
+	print(str(dump_count) + " Processed")
 	dump_count += 1
+
+print("Parse Errors: " + str(parse_errors))
+pickle_out = open("id_to_title.pickle", "wb")
+pickle.dump(id_to_title, pickle_out)
+
 
 # OUTPUT_DIR = sys.argv[2]
 
