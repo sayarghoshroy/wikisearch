@@ -100,7 +100,7 @@ class NewHandler(xml.sax.ContentHandler):
 			self.text_flag = True
 		elif name == "page":
 			doc_id = doc_id + 1
-			if doc_id % 10000 == 0:
+			if doc_id % 1000 == 0:
 				print("Doc ID:", doc_id)
 
 	def endElement(self, name):
@@ -276,13 +276,13 @@ class NewHandler(xml.sax.ContentHandler):
 # # !bzip2 -d 'gdrive/My Drive/ph1.xml-p1p30303.bz2'
 # data_path_unzipped = './ph1.xml-p1p30303'
 
-mypath = "./all_data"
+mypath = "/scratch/sayar/all_data"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 print("Number of Files: " + str(len(onlyfiles)))
 
 
-cutoff = int(1e4)
+cutoff = int(1e20)
 cutoff_increment = cutoff
 handler = NewHandler()
 parser = xml.sax.make_parser()
@@ -308,7 +308,7 @@ line = -1
 doc_id = 0
 temp_doc_id = 0
 dump_count = 1
-
+print("Starting Filewise Read")
 # while count < size:
 for data_path in onlyfiles:
 	indexed_dict = {}
@@ -340,13 +340,13 @@ for data_path in onlyfiles:
 			cutoff += cutoff_increment
 			break
 
-	pickle_out = open("temp_dicts/index" + str(dump_count) + ".pkl", "wb")
+	pickle_out = open("/scratch/sayar/temp_dicts/index" + str(dump_count) + ".pkl", "wb")
 	pickle.dump(indexed_dict, pickle_out)
 	print(str(dump_count) + " Processed")
 	dump_count += 1
 
 print("Parse Errors: " + str(parse_errors))
-pickle_out = open("id_to_title.pickle", "wb")
+pickle_out = open("/scratch/sayar/id_to_title.pickle", "wb")
 pickle.dump(id_to_title, pickle_out)
 
 

@@ -11,7 +11,7 @@ from os.path import isfile, join
 
 sequence = []
 
-mypath = "./temp_dicts"
+mypath = "/scratch/sayar/temp_dicts"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 start_flag = 0
@@ -19,13 +19,13 @@ start_dict = {}
 
 for idx in range(10):
 	sequence.append(str(idx))
-	file_final = open("./comb/" + str(idx) + ".pickle", "wb")
+	file_final = open("/scratch/sayar/comb/" + str(idx) + ".pickle", "wb")
 	pickle.dump({}, file_final)
 	file_final.close()
 
 for idx in range(26):
 	sequence.append(str(chr(ord('a') + idx)))
-	file_final = open("./comb/" + str(chr(ord('a') + idx)) + ".pickle", "wb")
+	file_final = open("/scratch/sayar/comb/" + str(chr(ord('a') + idx)) + ".pickle", "wb")
 	pickle.dump({}, file_final)
 	file_final.close()
 
@@ -55,13 +55,13 @@ for data_path in onlyfiles:
 		set_A.sort()
 
 		seq_ptr = 0
-		now_file = open("./comb/0" + ".pickle", "rb")
+		now_file = open("/scratch/sayar/comb/0" + ".pickle", "rb")
 		
 		try:
-			now_dict = pickle.load(file)
+			now_dict = pickle.load(now_file)
 		except EOFError:
 			now_dict = {}
-		now_file = open("./comb/0" + ".pickle", "wb")
+		now_file = open("/scratch/sayar/comb/0" + ".pickle", "wb")
 
 		for key in set_A:
 			if key[0] != sequence[seq_ptr]:
@@ -73,22 +73,27 @@ for data_path in onlyfiles:
 
 				if seq_ptr < charsize:
 					now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "rb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "rb")
 
 					try:
-						now_dict = pickle.load(file)
+						now_dict = pickle.load(now_file)
 					except EOFError:
 						now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "wb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "wb")
+
+				if seq_ptr == charsize:
+					print("Starter: Pushing Final Char")
+					pickle.dump(now_dict, now_file)
 
 			now_dict[key] = start_dict[key]
+		pickle.dump(now_dict, now_file)
 		start_dict = {}
 		continue
 
 	# Loading in the next file to be merged
 	newfile = open(file_path, "rb")
 	try:
-		new_dict = pickle.load(file)
+		new_dict = pickle.load(newfile)
 	except EOFError:
 		new_dict = {}
 
@@ -102,12 +107,12 @@ for data_path in onlyfiles:
 	
 	ptr_A = ptr_B = 0
 
-	now_file = open("./comb/0" + ".pickle", "rb")
+	now_file = open("/scratch/sayar/comb/0" + ".pickle", "rb")
 	try:
-		now_dict = pickle.load(file)
+		now_dict = pickle.load(now_file)
 	except EOFError:
 		now_dict = {}
-	now_file = open("./comb/0" + ".pickle", "wb")
+	now_file = open("/scratch/sayar/comb/0" + ".pickle", "wb")
 
 	seq_ptr = 0
 	update_set = []
@@ -127,12 +132,14 @@ for data_path in onlyfiles:
 					
 					if seq_ptr < charsize:
 						now_dict = {}
-						now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "rb")
+						now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "rb")
 						try:
-							now_dict = pickle.load(file)
+							now_dict = pickle.load(now_file)
 						except EOFError:
 							now_dict = {}
-						now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "wb")
+						now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "wb")
+					if seq_ptr == charsize:
+						pickle.dump(now_dict, now_file)
 
 				now_dict[set_B[ptr_B]] = new_dict[set_B[ptr_B]]
 				update_set.append(set_B[ptr_B])
@@ -150,12 +157,14 @@ for data_path in onlyfiles:
 				
 				if seq_ptr < charsize:
 					now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "rb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "rb")
 					try:
-						now_dict = pickle.load(file)
+						now_dict = pickle.load(now_file)
 					except EOFError:
 						now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "wb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "wb")
+				if seq_ptr == charsize:
+					pickle.dump(now_dict, now_file)
 
 			if set_A[ptr_A] not in now_dict.keys():
 				print(str(set_A[ptr_A]) + " Not in A")
@@ -179,12 +188,14 @@ for data_path in onlyfiles:
 				
 				if seq_ptr < charsize:
 					now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "rb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "rb")
 					try:
-						now_dict = pickle.load(file)
+						now_dict = pickle.load(now_file)
 					except EOFError:
 						now_dict = {}
-					now_file = open("./comb/" + sequence[seq_ptr] + ".pickle", "wb")
+					now_file = open("/scratch/sayar/comb/" + sequence[seq_ptr] + ".pickle", "wb")
+				if seq_ptr == charsize:
+					pickle.dump(now_dict, now_file)
 
 			now_dict[set_B[ptr_B]] = new_dict[set_B[ptr_B]]
 			update_set.append(set_B[ptr_B])
@@ -192,6 +203,8 @@ for data_path in onlyfiles:
 
 		elif set_B[ptr_B] > set_A[ptr_A]:
 			ptr_A += 1
-
+	
+	pickle.dump(now_dict, now_file)
 	for elem in update_set:
 		set_A.append(elem)
+	set_A.sort()

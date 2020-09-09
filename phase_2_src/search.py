@@ -1,5 +1,5 @@
 import time
-import pickle
+import _pickle as pickle
 import sys
 import os
 import math
@@ -9,6 +9,7 @@ import nltk
 import re
 import os
 import shutil
+import bz2
 
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
@@ -47,7 +48,7 @@ token_count = 0
 for word in stopword:
   word_set[word] = None
 
-file_id = open("id_to_title.pickle", "rb")
+file_id = open("/scratch/sayar/id_to_title.pickle", "rb")
 id_to_title = pickle.load(file_id)
 
 
@@ -93,9 +94,15 @@ for key in id_to_title.keys():
 doc_score = {}
 
 def get_token_scores(word):
-  first = word[0]
-  file = open("./comb/" + first + ".pickle", "rb")
-  dic = pickle.load(file)
+  size_consider = max(1, min(5, len(word)))
+  first = word[0: size_consider]
+  dic = {}
+  try:
+  	with bz2.BZ2File("/scratch/sayar/new_comb/" + first + ".pbz2", "rb") as file:
+  		dic = pickle.load(file)
+  except:
+  	return [[], [], [], [], [], [], [0, 0, 0, 0, 0, 0]]	
+  
   if word in dic:
     return dic[word]
   return [[], [], [], [], [], [], [0, 0, 0, 0, 0, 0]]
@@ -140,7 +147,7 @@ def field_query(query, K):
     scores[token] = get_token_scores(token)
     for field in range(6):
       for doc in scores[token][field]:
-        temp = (1 + math.log(doc[1])) * math.log(doc_cnt / len(scores[token][field]))
+        temp = (1 + math.log(doc[1])) * math.log(doc_cnt / scores[token][6][field])
         if token in token_query[field]:
           temp *= field_match_reward
         if doc[0] not in doc_score:
@@ -170,14 +177,16 @@ query_file = sys.argv[1]
 file = open(query_file, "r+").read().split("\n")
 
 for line in file:
-	doc_score = {}
-	start = time.time()
 	try:
+		doc_score = {}
+		start = time.time()
+		
 		K, query = line.split(", ")
 		K = int(K)
 		field_query(query, K)
 		end = time.time()
 		print(str(end - start) + ", " + str((end - start) / K))
 		print()
+	
 	except:
-		continue
+		"Aww Snap. Some Error Occured. :/"
