@@ -2,7 +2,7 @@ from os import listdir
 from os.path import isfile, join
 import _pickle as pickle
 import bz2
-
+import lzma
 # directory_load = './comb/'
 directory_load = '/scratch/sayar/comb/'
 
@@ -63,6 +63,6 @@ for file in files:
 		temp_dict[name_two][key] = new_temp
 
 	for key in temp_dict.keys():
-		with bz2.BZ2File(directory_store + str(key) + ".pbz2", 'wb') as f:
+		with lzma.open(directory_store + str(key) + ".xz", 'wb') as f:
 			pickle.dump(temp_dict[key], f)
 print(count)

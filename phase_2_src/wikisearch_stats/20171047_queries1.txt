@@ -1,0 +1,25 @@
+10, Nolan Sisters 1979
+10, 2005 earthquake
+20, Allan Rune Pettersson
+10, b:Toni Nadal i:Rafael Nadal
+10, b:radio program i:Mike Adams c:American sports radio programs
+20, t:1968 France rugby union tour b:australia
+10, c:Political parties in France i:Dominique de Villepin
+10, b:Marc Spector i:Marvel Comics c:1980 comics debuts
+10, b:level 42
+5, t:Sebastien Siani c:K.V. Oostende players i:Sebastien
+20, Kamienica Pomeranian Voivodeship
+10, USS Conolly
+5, Pozzo di Borgo
+20, The Capture 1950
+10, Combat School
+10, b:Prisoner of Azkaban i:2004
+20, t:Birdseye b:Tarantula
+5, t:Fuaamotu i:Nukualofa
+3, b:V for Vendetta i:2006
+5, young's modulus
+10, b:Speed of light c:Concepts in physics
+20, b:angus r:tories i:James Lee
+30, b:Taxicab 1729
+50, b:Marc Spector i:Marvel Comics c:1980 comics debuts
+100, Sudebnik

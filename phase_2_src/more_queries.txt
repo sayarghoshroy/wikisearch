@@ -1,0 +1,26 @@
+5, b:St Pancras t:Underground 
+5, b:Vendetta c:Films about fascism 
+10, Trinec Steel Works 
+10, Gandhi 1982 
+10, Wong-fat 
+20, Missouri Route 85 
+10, i:school t:shahid 
+10, Catcher in the Rye 
+5, t:Fallout i:windows r:bethesda 
+10, Sudebnik 
+20, Kamienica Pomeranian Voivodeship 
+20, Adobe Acrobat 
+20, b:Redmond i:Los Angeles Kings c:1965 births 
+20, t:College Hoops 2K8 i:Xbox 360 
+10, t:presidential campaign b:obama i:2012 
+10, t:2006 Brazilian Grand Prix i:Michael Schumacher c:2006 Formula One 
+10, USS Conolly 
+10, t:American Airlines Flight b:crash 
+3, b:V for Vendetta i:2006 
+5, young's modulus 
+10, b:Speed of light c:Concepts in physics 
+20, b:angus r:tories i:James Lee 
+30, b:Taxicab 1729 
+50, b:Marc Spector i:Marvel Comics c:1980 comics debuts 
+100, Sudebnik
+

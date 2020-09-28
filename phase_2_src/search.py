@@ -10,6 +10,7 @@ import re
 import os
 import shutil
 import bz2
+import lzma
 
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
@@ -70,7 +71,7 @@ def regtok(txt):
 
 def stri(lst):
   N = len(lst)
-  disp = min(N, 10)
+  disp = min(N, 100)
   store = ""
 
   for i in range(disp):
@@ -86,9 +87,7 @@ def stri(lst):
 scores = {}
 # stores returned postings of all encountered tokens
 
-doc_cnt = 0
-for key in id_to_title.keys():
-  doc_cnt += 1
+doc_cnt = len(id_to_title.keys())
 # Total number of docs encountered in the dump
 
 doc_score = {}
@@ -98,8 +97,8 @@ def get_token_scores(word):
   first = word[0: size_consider]
   dic = {}
   try:
-  	with bz2.BZ2File("/scratch/sayar/new_comb/" + first + ".pbz2", "rb") as file:
-  		dic = pickle.load(file)
+    with lzma.open("/scratch/sayar/new_comb/" + first + ".xz", "rb") as file:
+    	dic = pickle.load(file)
   except:
   	return [[], [], [], [], [], [], [0, 0, 0, 0, 0, 0]]	
   
@@ -115,7 +114,7 @@ def field_query(query, K):
   normal_query = []
 
   tokens = []
-  field_match_reward = 2.5
+  field_match_reward = 5
 
   flag = -1
   for unit in units:
@@ -180,7 +179,6 @@ for line in file:
 	try:
 		doc_score = {}
 		start = time.time()
-		
 		K, query = line.split(", ")
 		K = int(K)
 		field_query(query, K)

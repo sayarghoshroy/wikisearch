@@ -1,0 +1,395 @@
+3005462, st pancras railway station
+2962969, king's cross st pancras tube station
+8433406, st pancras old church
+6134735, metropolitan borough of st pancras
+4562352, list of churches in the diocese of london
+3.5815229415893555, 0.7163045883178711
+
+1112058, v for vendetta (film)
+3792211, v for vendetta
+8685662, vendetta
+8685606, vendetta (1950 film)
+3403594, norsefire
+2.187736749649048, 0.4375473499298096
+
+8082986, třinec iron and steel works
+3008057, u.s. steel
+1627979, hc oceláři třinec
+7771972, fk fotbal třinec
+6203986, michael steele
+3505807, bethlehem steel
+2671100, joliet iron and steel works
+3214793, steel (john henry irons)
+1263888, tata steel europe
+7438011, homestead steel works
+3.910937786102295, 0.3910937786102295
+
+3041819, mahatma gandhi
+6128418, gandhi (film)
+3038921, indira gandhi
+7559118, assassination of mahatma gandhi
+3046328, rajiv gandhi
+7496953, indira gandhi arena
+6447085, rajmohan gandhi
+7480299, 1982 tour de france
+8472403, rajiv gandhi khel ratna
+4787718, national gandhi museum
+1.0497901439666748, 0.10497901439666749
+
+1438229, anna may wong
+3778747, file allocation table
+2995900, faye wong
+6454302, wong (surname)
+8435858, tyrus wong
+1361082, united states v. wong kim ark
+1494415, fat albert and the cosby kids
+2952846, wong kar-wai
+6150236, big fat liar
+1085696, the fat boys
+0.08946013450622559, 0.00894601345062256
+
+6313476, list of special routes of the united states numbered highway system
+2815286, wikipedia:wikiproject missouri/cleanup listing
+1509484, u.s. route 85
+7481218, wikipedia:requested articles/applied arts and sciences/transport
+1367395, u.s. route 166
+6170029, u.s. route 60
+3041926, missouri
+3429487, washington county, missouri
+9211882, wikipedia:wikiproject deletion sorting/transportation/archive
+3429552, jefferson county, missouri
+3429594, boone county, missouri
+3476656, springfield, missouri
+3429590, callaway county, missouri
+3429601, audrain county, missouri
+3429568, franklin county, missouri
+3304517, springfield metropolitan area, missouri
+3429518, perry county, missouri
+4497102, 2012 united states senate election in missouri
+3040480, kansas city, missouri
+6171775, u.s. route 160
+1.7610044479370117, 0.08805022239685059
+
+6233326, shahid afridi
+2047908, list of high school musical characters
+5989143, shahid kapoor
+455545, saint andrews international high school
+8863144, shahid dastgheib high school
+7867812, west town academy
+4349065, list of prince george's county public schools middle schools
+6261421, agha shahid ali
+6108450, shahid beheshti university
+2061071, maurice-tièche comprehensive school
+2.537299871444702, 0.2537299871444702
+
+3498559, the catcher in the rye
+540145, j. d. salinger
+6726916, the catcher in the rye in popular culture
+8937056, bang (rye rye song)
+6135398, rye, east sussex
+8957514, sunshine (rye rye song)
+2980007, rye, new york
+3454935, rye, new hampshire
+5470566, rye rye
+2980008, rye (town), new york
+0.09009766578674316, 0.009009766578674316
+
+3488982, fallout (series)
+3772692, bethesda, maryland
+3258598, fallout 3
+5011309, fallout 3 downloadable content
+3772981, windows media player
+0.26434326171875, 0.05286865234375
+
+5946114, sudebnik of 1497
+8093731, sudebnik of 1550
+1417737, russkaya pravda
+3474870, ivan iii of russia
+8748679, sudebnik of kazimir
+6219118, law of russia
+5582439, wikipedia:wikiproject russia/new article announcements/january 2007
+1859435, list of belarus-related topics
+7681166, sobornoye ulozheniye
+6364699, serfdom in russia
+0.0006089210510253906, 6.0892105102539064e-05
+
+3800400, kuyavian-pomeranian voivodeship
+3496267, west pomeranian voivodeship
+7026483, template:gmina stężyca, pomeranian voivodeship
+7125307, template:gmina szczecinek
+7107601, template:gmina polanów
+4684455, wikipedia:wikiproject poland/cleanup listing
+6902813, template:gmina miastko
+3427867, pomeranian voivodeship
+7093226, template:gmina nowogard
+2839769, template:gmina mogilno
+2823401, template:gmina wałcz
+2839645, template:gmina skępe
+7093115, template:gmina goleniów
+7026335, template:gmina sierakowice
+7107983, template:gmina myślibórz
+6996833, template:gmina chojnice
+7125459, template:gmina połczyn-zdrój
+7107457, template:gmina bobolice
+7124720, template:gmina sławno, west pomeranian voivodeship
+2810108, template:gmina szubin
+0.19006800651550293, 0.009503400325775147
+
+2947303, adobe acrobat
+6125036, adobe creative suite
+7442803, list of adobe software
+3030255, adobe inc.
+3044973, pdf
+6462729, adobe flash player
+9278676, adobe technical communication suite
+5655298, postscript fonts
+1348119, adobe atmosphere
+7640852, adobe livecycle designer
+3009925, adobe dreamweaver
+3042831, adobe flash
+3492649, adobe indesign
+6425333, adobe premiere elements
+958897, template:adobe inc.
+1381442, swf
+3046557, adobe robohelp
+5931482, adobe shockwave
+6017649, adobe premiere pro
+1312063, adobe connect
+0.022648334503173828, 0.0011324167251586914
+
+3792142, los angeles kings
+3040926, los angeles international airport
+3046613, redmond, washington
+3584866, south los angeles
+6206857, history of los angeles
+6178800, chinatown, los angeles
+3040909, los angeles
+2947637, john redmond
+6164760, echo park, los angeles
+6287987, 1965 world series
+6164774, watts, los angeles
+1361049, los angeles memorial coliseum
+6190593, lincoln heights, los angeles
+6163982, hancock park, los angeles
+3495390, los angeles river
+6160767, los angeles aqueduct
+6142500, boyle heights, los angeles
+6228755, silver lake, los angeles
+1065496, east hollywood, los angeles
+3796364, los angeles county, california
+7.632232904434204, 0.3816116452217102
+
+7852238, college hoops 2k7
+6533335, college hoops 2k6
+1959584, xbox 360
+9750472, college hoops 2k8
+6741091, nba 2k7
+6844450, list of xbox 360 accessories
+3851098, nba 2k8
+2781342, list of rock band track packs
+7717635, nhl 2k7
+6391036, espn college hoops 2k5
+1281238, nba 2k6
+3559023, you're in the movies
+9521269, xbox 360 controller
+5828722, xbox live arcade unplugged
+7582247, marvel vs. capcom 2: new age of heroes
+9590366, section 8 (video game)
+9262830, xbox 360 system software
+7463204, nhl 2k6
+7632661, xbox games store
+8101450, major league baseball 2k8
+17.458836793899536, 0.8729418396949769
+
+33115, barack obama 2012 presidential campaign
+6222757, barack obama
+2693794, barack obama 2008 presidential campaign
+890287, 2012 united states presidential election
+8217429, list of barack obama 2008 presidential campaign endorsements
+1518579, barack obama 2008 presidential primary campaign
+885341, presidency of barack obama
+6149017, 2008 united states presidential election
+5646093, john mccain 2008 presidential campaign
+574345, 2012 democratic national convention
+4.49821400642395, 0.449821400642395
+
+3042471, michael schumacher
+6824429, 2006 brazilian grand prix
+3007910, ralf schumacher
+1380628, lewis hamilton
+6807919, 2006 german grand prix
+6537163, 2006 monaco grand prix
+3207089, 2006 australian grand prix
+6680855, 2006 united states grand prix
+2975252, rubens barrichello
+6824359, 2006 turkish grand prix
+11.458174467086792, 1.1458174467086792
+
+6233035, uss conolly
+6161597, list of destroyers of the united states navy
+1418604, list of auxiliaries of the united states navy
+8158386, 1967 uss forrestal fire
+7662930, list of united states navy lsts
+5697164, list of united states navy landing craft infantry (lci)
+3498978, uss nimitz
+1394305, uss arizona memorial
+9109216, edward michael conolly
+7151515, template:sc-497 class submarine chaser
+0.09444594383239746, 0.009444594383239746
+
+6149565, list of accidents and incidents involving airliners by location
+2971771, american airlines flight 191
+3030212, american airlines flight 77
+6151846, american airlines flight 1420
+6161773, united airlines flight 232
+4292139, american airlines flight 331
+9211882, wikipedia:wikiproject deletion sorting/transportation/archive
+3767233, american airlines flight 587
+6156136, american airlines flight 965
+2636894, american airlines flight 11
+5.933145046234131, 0.5933145046234131
+
+1112058, v for vendetta (film)
+3792211, v for vendetta
+537945, alan moore
+4.107294082641602, 1.3690980275472004
+
+2961372, young's modulus
+3777759, thomas young (scientist)
+3801859, neil young
+6850955, neil young discography and filmography
+3501921, the young and the restless
+0.8209865093231201, 0.16419730186462403
+
+3048038, speed of light
+3799348, zero-point energy
+3046875, special relativity
+7587686, wikipedia:reference desk/archives/science/january 2006
+3048824, time
+3308441, wikipedia:reference desk/archives/science/april 2006
+3048056, spacetime
+7395430, wikipedia:reference desk/archives/science/november 2005
+3186898, wikipedia:reference desk/archives/science/march 2006
+4772708, wikipedia:arbitration/requests/case/speed of light/workshop
+2.377044200897217, 0.23770442008972167
+
+9211764, wikipedia:wikiproject deletion sorting/actors and filmmakers/archive
+9211762, wikipedia:wikiproject deletion sorting/people/archive
+9211890, wikipedia:wikiproject deletion sorting/martial arts/archive
+7905567, angus 
+2969329, angus cattle
+1117532, tory (disambiguation)
+9211772, wikipedia:wikiproject deletion sorting/bands and musicians/archive
+9196654, wikipedia:wikiproject deletion sorting/united states of america/archive
+3046089, robert e. lee
+1539705, william douglas, 2nd earl of angus
+6234404, earl of angus
+2985796, montrose, angus
+6200546, angus king
+3034699, dundee
+3030658, angus, scotland
+1083838, richard b. angus
+3764146, tori amos
+1499625, carnoustie
+6454406, st james' church, sydney
+2985016, james vi and i
+1.335723876953125, 0.06678619384765624
+
+6210516, taxicab number
+6210191, 1729 (number)
+6761043, taxicabs by country
+7132875, taxicab
+1720978, taxicabs of the united states
+1209253, taxicabs of new york city
+2509054, wikipedia:wikiproject spam/linkreports/trentoincina.it
+5990439, checker motors corporation
+6149922, taxicab geometry
+7554736, list of acts of the parliament of great britain, 1720–1739
+3776014, philosophiæ naturalis principia mathematica
+1768263, taxicabs of the united kingdom
+4913355, hybrid taxi
+1382408, generalized taxicab number
+2172066, taxis in india
+1904588, taxicabs of mexico
+6140454, hackney carriage
+9821326, gilles hocquart
+6759554, 1729 beryl
+7814425, comet of 1729
+5990432, yellow cab
+9316639, new york city taxi and limousine commission
+3055793, lord william powlett
+8574550, taxicabs of singapore
+5986353, treaty of seville (1729)
+7474210, church cantata (bach)
+5292945, taxicabs of the philippines
+4111601, illegal taxicab operation
+7851474, black 
+7338703, taxicabs of canada
+0.01752758026123047, 0.000584252675374349
+
+1504473, moon knight
+6147139, captain marvel (dc comics)
+2986476, namor
+2904513, daredevil (marvel comics character)
+3765699, x-men
+6184906, new mutants
+3047541, spider-man
+6229396, the tomb of dracula
+3765698, x-factor (comics)
+5881253, marvel graphic novel
+5848007, star wars comics
+1483762, marvel comics presents
+4513898, thor (marvel comics)
+3008303, avengers (comics)
+9353076, tarzan in comics
+6305489, cobra (marvel comics)
+3497476, deadpool
+2966475, mystique (comics)
+1502062, taskmaster (comics)
+1391371, emma frost
+6699736, lethal legion
+3484012, rogue (marvel comics)
+7972221, frankenstein's monster (marvel comics)
+1466240, marvel team-up
+5825839, carol danvers
+1305539, marvel fanfare
+6205846, blade (character)
+1398977, mary marvel
+3385084, whiplash (marvel comics)
+6132845, elektra (character)
+7917532, captain marvel jr.
+6305456, cloak and dagger (comics)
+3039132, iceman (marvel comics)
+3476130, doctor strange
+6501468, dracula (marvel comics)
+2963841, storm (marvel comics)
+8116156, mystic comics
+7413476, marvel comics super special
+3764169, hulk
+3442223, wonder woman
+6457578, loki (comics)
+7563938, venus (marvel comics)
+3047812, superman
+6024469, black panther (marvel comics)
+3797333, action comics
+3431838, captain marvel (marvel comics)
+2999784, teen titans
+1405744, generation x (comics)
+2994678, longshot (marvel comics)
+6158886, dazzler (marvel comics)
+4.697411060333252, 0.09394822120666504
+
+5946114, sudebnik of 1497
+8093731, sudebnik of 1550
+1417737, russkaya pravda
+3474870, ivan iii of russia
+8748679, sudebnik of kazimir
+6219118, law of russia
+5582439, wikipedia:wikiproject russia/new article announcements/january 2007
+1859435, list of belarus-related topics
+7681166, sobornoye ulozheniye
+6364699, serfdom in russia
+5015900, william e. butler
+3070504, pskov judicial charter
+0.0004673004150390625, 4.673004150390625e-06
+
