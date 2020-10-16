@@ -1,6 +1,10 @@
 # Wikisearch
 
-### The raw dump can be accessed [here](https://drive.google.com/file/d/1jks0SuLrO2vZpWGEYNHBXYAW734VM-h7/view?usp=sharing).
+### A Search Engine for the Wikipedia Dump built from scratch
+
+- Refer to `./problem_statements` for complete specifications of requirements and deliverables
+
+#### The raw dump can be accessed [here](https://drive.google.com/file/d/1jks0SuLrO2vZpWGEYNHBXYAW734VM-h7/view?usp=sharing).
 
 - File paths in phase_2_src are currently referencing the storage structure on the IIIT Ada Server
 - Make appropriate path changes prior to running the index maker and search functionalities
